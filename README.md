@@ -1,5 +1,6 @@
 ![Logo PolitEconomy](images/logo.png) 
-#Análise de Sentimento de Notícias Políticas e Econômicas
+
+# Análise de Sentimento de Notícias Políticas e Econômicas
 
 ## Visão Geral do Projeto
 
