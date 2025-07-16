@@ -1,0 +1,155 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 210px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: #2E3C4C 0px 3px 8px;
+    backdrop-filter: blur(20px);
+    color: #2E3C4C;
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #2E3C4C;
+}
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid #2E3C4C;
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    color: #2E3C4C;
+}
+
+.input-box input::placeholder{
+    color:  #2E3C4C;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%; /* Colocar o ~~começo~~ da imagem no meio */
+    transform: translateY(-50%); /* Translate para ficar certinho no meio */
+    font-size: 25px;
+    
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    color: #2E3C4C;
+}
+
+
+.remember-forgot label input{
+    accent-color: #2E3C4C;
+    margin-right: 5px;
+}
+
+.remember-forgot a{
+    text-decoration: none;
+    color: #2E3C4C;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.login {
+    width: 100%;
+    height: 50px;
+    background-color: #2E3C4C;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.login:hover{
+    border: 2px solid #2E3C4C;
+    background-color: transparent;
+    color: #2E3C4C;
+    transition: 0.3s;
+}
+
+.register-link{
+    font: 14px;
+    text-align: center;
+    margin: 20px 0;
+    color: #2E3C4C;
+    
+}
+
+.register-link a{
+    text-decoration: none;
+    color: #2E3C4C;
+    font-weight: 600;
+}
+
+.register-link a:hover{
+    text-decoration: underline;
+}
+
+.message-box {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.message-box.success {
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb;
+}
+
+
+.message-box.error {
+    background-color: #f8d7da; 
+    color: #721c24; 
+    border: 1px solid #f5c6cb;
+}
+
+.message-box.show {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+}

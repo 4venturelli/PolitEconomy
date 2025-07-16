@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolitEconomy | Plataforma de Análise de Investimentos</title>
+    <link rel="stylesheet" href="src/css/stylesBase.css">
+    <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+<body class="login-page">
+    <header class="navbar">
+            <div class="navbar-container">
+                <h1 class="logo">
+                    <a href="index.html">Polit<span>Economy</span></a>
+                </h1>
+                <nav>
+                    <ul class="navbar-content">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="analysis.html">Análise</a></li>
+                        <li><a href="about.html">Quem Somos</a></li>
+                        <li class="active" id="navLoginLink"> <a href="login.html" class="login-link">
+                                Acesse sua conta <i class="bx bx-log-out"></i>
+                            </a>
+                            <div id="userDropdown" class="user-dropdown">
+                                <button id="logoutButton">Sair</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <img src="/images/menu.png" class="menu-button"/>
+                </div>
+            </div>
+    </header>
+    <main>
+    <div class="container" id="loginFormContainer"> 
+        <h1>Entrar</h1>
+        <form id="loginForm"> 
+            <div class="input-box">
+                <input placeholder="Email" type="text" id="emailOrUserCad" required>
+                <i class="bx bxs-user"></i>
+            </div>    
+            <div class="input-box">
+                <input placeholder="Senha" type="password" id="password" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox">
+                    Lembrar senha
+                </label>
+                <a href="#"> Esqueci a senha</a> 
+            </div>
+            <button type="submit" class="login">Entrar</button> 
+        </form>
+        <p id="message" class="message-box"></p> 
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+        </div>
+    </div>
+</main>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 PolitEconomy. Todos os direitos reservados.</p>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+        </div>
+    </footer>
+    <script type="module" src="src/javascript/script.js"></script>
+</body>
+</html>

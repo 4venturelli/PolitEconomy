@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolitEconomy | Plataforma de Análise de Investimentos</title>
+    <link rel="stylesheet" href="src/css/stylesBase.css">
+    <link rel="stylesheet" href="src/css/analysis.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/novus/nvd3@v1.8.1/build/nv.d3.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/novus/nvd3@v1.8.1/build/nv.d3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+<body>
+    <div class="faixa-topo"></div>
+    <div id="loader" style="text-align: center; padding: 40px;">
+        <div class="spinner"></div>
+        <!-- <p>Carregando análises e notícias...</p> -->
+    </div>
+    <div id="main-content" style="display: none;">
+        <header class="navbar">
+            <div class="navbar-container">
+                <h1 class="logo">
+                    <a href="index.html">Polit<span>Economy</span></a>
+                </h1>
+                <nav>
+                    <ul class="navbar-content">
+                        <li><a href="index.html">Início</a></li>
+                        <li class="active"><a href="analysis.html">Análise</a></li>
+                        <li><a href="about.html">Quem Somos</a></li>
+                        <li id="navLoginLink"> <a href="login.html" class="login-link">
+                                Acesse sua conta <i class="bx bx-log-out"></i>
+                            </a>
+                            <div id="userDropdown" class="user-dropdown">
+                                <button id="logoutButton">Sair</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <img src="/images/menu.png" class="menu-button"/>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- <div class="banner">
+                <img src="/frontend/images/background_index.png" alt="">
+            </div> -->
+            <div class="header-bottom-side">
+                <h2>Análise de Sentimento para Investimentos</h2>
+                <p>Pesquise por políticos, eventos ou setores econômicos</p>
+                <div class="search-container">
+                    <select name="search-target" class="search-target">
+                        <option value="Tópico">Tópico</option>
+                        <option value="Manchete">Manchete</option>
+                        <option value="Autor">Autor</option>
+                    </select>
+                    <input type="text" class="input-field" placeholder="Digite sua busca aqui...">
+                    <button class="search-button">Buscar</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="select-topicos-container">
+                    <label for="select-topicos">Analíses sobre: </label>
+                    <select name="select-topicos" class="select-topicos" id="select-topicos">
+                        <option value="Economia e Política">Economia e Política</option>
+                        <option value="Economia">Economia</option>
+                        <option value="Política">Política</option>
+                    </select>
+                </div>
+                <h2>Tópicos em Alta</h2>
+                <div class="topics" id="trending-topics-container"></div>
+                <h2>Análise Recentes</h2>
+                <div class="analitics">
+                    <div class="graph" id="sentimento-noticias">
+                        <h3>Porcentagem de sentimento diário</h3>
+                        <svg style="height:250px"></svg>
+                    </div>
+                    <div class="proporcao-portais" id="proporcao-portais">
+                        <h3>Proporção de notícias públicadas (em %)</h3>
+                        <svg style="height:250px"></svg>
+                    </div>
+                </div>
+                <div class="trend-ranking">
+                    <h3>Top 20 tópicos da semana</h3>
+                    <svg style="height:400px;"></svg>
+                </div>
+            </div>
+            <h2 style="text-align: center; margin-top: 40px;">Últimas Notícias</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev">&#10094;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="latest-news-carousel"></div>
+                </div>
+                <button class="carousel-button next">&#10095;</button>
+            </div>
+        </main>
+        <footer>
+        <div class="footer">
+            <p>&copy; 2025 PolitEconomy. Todos os direitos reservados.</p>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+        </div>
+    </footer>
+    <script type="module" src="src/javascript/script.js"></script>
+    <script type="module" src="src/javascript/analysis.js"></script>
+</body>
+</html>

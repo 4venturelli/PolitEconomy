@@ -1,0 +1,70 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 210px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    width: 450px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: #2E3C4C 0px 3px 8px;
+    backdrop-filter: blur(20px);
+    color: #2E3C4C;
+}
+
+.container h1 {
+    font-size: 27px;
+    text-align: center;
+    color: #2E3C4C;
+    margin-bottom: 15px;
+}
+
+.container h2 {
+    font-size: 15px;
+    text-align: justify;
+    color: #2E3C4C;
+}
+
+.keywords-display-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.keyword-tag {
+    display: inline-flex; /* Usar flex para alinhar texto e ícone */
+    align-items: center;
+    background-color: #007bff; /* Cor azul, pode ser personalizada */
+    color: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    line-height: 1; /* Para alinhar melhor verticalmente */
+}
+
+.keyword-tag .remove-tag {
+    color: white;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+        
+.keyword-tag .remove-tag:hover {
+    color: #ffcccc;
+}
+
+.no-keywords-message {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 10px 0;
+}

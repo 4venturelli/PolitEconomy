@@ -1,0 +1,233 @@
+#chartSentimento {
+  width: 100%;
+  min-height: 400px;
+  border: 1px dashed #ccc; /* Temporário para visualização */
+}
+
+.no-data, .error {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.tooltip {
+  background: white;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+.resume-sentiment {
+    width: 100%;
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.resume-content{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.resume-graph {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+.sentiment-text-summary p {
+    margin: 2px 0;
+    font-size: 0.9em;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para o quadrado de cor */
+.color-box {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+/* Cores dos quadrados */
+.color-box.bg-green { background-color: green; }
+.color-box.bg-red { background-color: red; }
+.color-box.bg-blue { background-color: #4F94DA; }
+
+
+.indice-confiança{
+    flex-grow: 1;
+    min-width: 200px;
+    margin-left: auto;
+    text-align: left;
+}
+
+.indice-confiança h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.indice-confiança p {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.search-filters {
+    margin: 20px 0px 20px 0px;
+    color: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    /*border: 2px solid #ccc;*/
+    box-shadow: 0 0 5px #ccc;
+}
+
+.search-filters p {
+    margin: 0;
+    background-color: #08082a;
+}
+
+.search-filters div {
+    margin: 10px 0px 15px 0px;
+}
+
+.search-filters input:focus-visible,
+.search-filters input:active,
+.search-filters select:focus-visible,
+.search-filters select:active {
+    border:none;
+    box-shadow: 0 0 15px #ccc;
+    outline: none;
+}
+
+.search-filters .input-date {
+    padding: 3px 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    min-width: 150px;
+    transition: border 0.3s;
+}
+
+.search-filters .input-date:focus-visible {
+    border: none;
+}
+
+.portalSelect {
+    font-weight: bolder;
+    text-align: center;
+    padding: 3px 8px;
+    border-radius: 50px;
+}
+
+.notices{
+    display: grid;
+    gap: 16px;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.sentimento-bar {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 20px 0 0 20px;
+}
+
+.sentimento-bar.positive { background-color: green; }
+.sentimento-bar.negative { background-color:red; }
+.sentimento-bar.neutral { background-color: #4F94DA; }
+
+.notices-content{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 20px 20px 40px;
+}
+
+.notices-content h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.notices-content h4{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.notices-content p {
+    margin: 0 0 5px 0;
+}
+
+.notices-content a {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: #FFF;
+    padding: 10px 20px;
+    background-color: #08082a;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bolder;
+    transition: all 0.5s;
+}
+
+.notices-content a:hover {
+    background-color: #FFF;
+    color: #08082a;
+    border: solid 1px #08082a;
+}
+
+.notice-positive, .notice-negative, .notice-neutral {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}
+
+
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px
+}
+
+.carregar-mais {
+    background-color:#08082a;
+    color: #FFF;
+    padding: 10px 30px;
+    font-weight: bolder;
+    border-radius: 0px 40px;
+    transition: all 0.5s;
+}
+
+.carregar-mais:hover {
+    border-radius: 40px 0px;
+    color: #08082a;
+    background-color: #FFF;
+}

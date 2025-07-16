@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolitEconomy | Plataforma de Análise de Investimentos</title>
+    <link rel="stylesheet" href="src/css/stylesBase.css">
+    <link rel="stylesheet" href="src/css/analysis.css">
+    <link rel="stylesheet" href="src/css/search.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- D3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+    <!-- NVD3.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">
+                <a href="index.html">Polit<span>Economy</span></a>
+            </h1>
+            <nav>
+                <ul class="navbar-content">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="analysis.html">Análise</a></li>
+                    <li><a href="about.html">Quem Somos</a></li>
+                    <li id="navLoginLink"> <a href="login.html" class="login-link">
+                        Acesse sua conta <i class="bx bx-log-out"></i>
+                        </a>
+                        <div id="userDropdown" class="user-dropdown">
+                            <button id="logoutButton">Sair</button>
+                         </div>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <img src="/images/menu.png" class="menu-button"/>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="header-bottom-side">
+            <h2>Análise de Sentimento para Investimentos</h2>
+            <p>Pesquise por políticos, eventos ou setores econômicos</p>
+            <div class="search-container">
+                <select name="search-target" class="search-target">
+                    <option value="Tópico">Tópico</option>
+                    <option value="Manchete">Manchete</option>
+                    <option value="Autor">Autor</option>
+                </select>
+                <input type="text" class="input-field" id="search-input-field" placeholder="Digite sua busca aqui...">
+                <button class="search-button" id="search-page-button">Buscar</button>
+            </div>
+            <div class="search-filters">
+                    <p>Filtros de busca:</p>
+                    <div class="date-filters">
+                        Período: 
+                        <input class="input-date" type="date" id="dataInicio">
+                        -
+                        <input class="input-date" type="date" id="dataLimite">
+                    </div>
+                    <div class="portal-filters">
+                        <label for="portalSelect">Portal: </label>
+                        <select name="portalSelect" class="portalSelect" id="portalSelect">
+                            <option value="Todos">Todos</option>
+                        </select>
+                    </div>
+
+                </div>
+        </div>
+        <div class="content">
+            <h2 id="search-page-title">Resultado para: </h2> 
+            <div id="sentimentoTempo">
+                  <svg style="height:400px; width:100%"></svg>
+                </div>
+            <h2>Notícias Recentes</h2>
+            <div class="notices"></div>
+            <div class="load-more-container">
+                <button class="carregar-mais">Carregar Mais</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 PolitEconomy. Todos os direitos reservados.</p>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+        </div>
+    </footer>
+    <script type="module" src="src/javascript/script.js"></script>
+    <script type="module" src="src/javascript/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+.header-bottom-side_about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    background-color: #040424;
+    text-align: center;
+    height: 250px;
+}
+
+.header-bottom-side_about h2{
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.header-bottom-side_about p{
+    line-height: 24px;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+    max-width: 600px;
+    font-size: 20px;
+}
+
+.header-bottom-side_about p span{
+    color: #BC332D;
+}
+
+.header-bottom-side_about button:hover{
+    background-color: #BC332D;
+    transition: all 0.2s;
+}
+
+.search-button_about{
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 40px;
+    padding: 0 20px;
+    background-color: #E34C45;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    font-size: 15px;
+}
+
+.content_about{
+    padding: 32px 16px;
+    
+}
+
+.content_about h1{
+    max-width: 1020px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: left;
+    font-size: 2.2em;
+}
+
+.content_about h2{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    padding: 0;
+    text-align: left;
+}
+
+.content_about h3{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px; 
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    color: #424141;
+}
+
+.topics_about{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Adicionando margem negativa e z-index para sobreposição */
+    margin-top: -80px; /* Ajuste este valor conforme o quanto você quer sobrepor */
+    position: relative; /* Garante que z-index funcione */
+    z-index: 2; /* Garante que ele fique acima do header-bottom-side */
+}
+
+.economy, .politician, .analitics_about{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+
+.content_about h3{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    padding: 0;
+    text-align: left;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about h1 span{
+    color: red
+}
+
+.about p{
+    font-size: 18px;
+    margin: 0px 25px 0px 25px
+}
+
+.team_development {
+    display: flex;
+    max-width: 1020px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.developer{
+    margin: 0px 15px 0px 15px;
+}
+
+.developer img{
+   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .developer {
+        margin: 10px 15px 10px 15px;
+    }
+
+    .developer p {
+        max-width: 130px;
+        text-align: center;
+    }
+}

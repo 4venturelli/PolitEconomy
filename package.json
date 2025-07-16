@@ -1,0 +1,33 @@
+{
+  "name": "politeconomy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "nodemon ./backend/index.js",
+    "coletor": "node ./coletor/main",
+    "frontend": "live-server ./frontend",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.16.1",
+    "node-cron": "^4.2.0",
+    "nodemailer": "^7.0.5",
+    "puppeteer": "^24.8.2",
+    "tar-fs": ">=3.0.9"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules 
+jsons/*.json 
+.txt
+/portais_jsons/
+.env
+txt.txt
+tag.txt
+analise_sentimento/bertopic_tag

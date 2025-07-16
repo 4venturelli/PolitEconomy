@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolitEconomy | Personalizar Notificações</title>
+    <link rel="stylesheet" href="src/css/stylesBase.css">
+    <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="src/css/notifications.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">
+                <a href="index.html">Polit<span>Economy</span></a>
+            </h1>
+            <nav>
+                <ul class="navbar-content">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="analysis.html">Análise</a></li>
+                    <li><a href="about.html">Quem Somos</a></li>
+                    <li id="navLoginLink">
+                        <a href="login.html" class="login-link">
+                            Acesse sua conta <i class="bx bx-log-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Personalizar Notificações</h1>
+            <p id="message"></p>
+            <form id="notificationPreferencesForm">
+                <h2>Informe suas palavras-chave e fique por dentro dos assuntos que mais importam.</h2>
+                <div class="input-box">
+                    <input type="text" id="keywordsInput" placeholder="Ex: Petróleo, Eleições, Inflação" required>
+                    <small>Separe as palavras-chave com vírgulas.</small>
+                </div>
+                
+                <button type="submit" class="login">Adicionar Palavras-Chave</button>
+            </form>
+
+            <div class="keywords-display-container">
+                <h3>Palavras-Chave adicionadas:</h3>
+                <div id="currentKeywordsDisplay">
+                    Carregando palavras-chave...
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 PolitEconomy. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="src/javascript/script.js"></script>
+    <script type="module" src="src/javascript/notifications.js"></script>
+</body>
+</html>
