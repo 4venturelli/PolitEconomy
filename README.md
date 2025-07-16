@@ -1,6 +1,5 @@
 <img src="images/logo.png" width="267" height="56">
-
-# Análise de Sentimento de Notícias Políticas e Econômicas
+Análise de Sentimento de Notícias Políticas e Econômicas
 
 ## Visão Geral do Projeto
 
