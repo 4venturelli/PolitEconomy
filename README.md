@@ -73,6 +73,7 @@ O PolitEconomy segue uma arquitetura distribuída, composta pelos seguintes mód
 ![Página Analise do PolitEconomy](images/analise2.png)
 ![Página Analise do PolitEconomy](images/analise3.png)
 
+
 * #### Interface de Pesquisa com Termo Especificado
 
 ![Página Analise do PolitEconomy](images/analise_search1.png)
