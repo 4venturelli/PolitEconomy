@@ -1,4 +1,4 @@
-# PolitEconomy: Análise de Sentimento de Notícias Políticas e Econômicas
+# ![Logo PolitEconomy](images/logo.png): Análise de Sentimento de Notícias Políticas e Econômicas
 
 ## Visão Geral do Projeto
 
@@ -77,7 +77,6 @@ O PolitEconomy segue uma arquitetura distribuída, composta pelos seguintes mód
 * #### Interface de Pesquisa com Termo Especificado
 
 ![Página Analise do PolitEconomy](images/analise_search1.png)
-![Página Analise do PolitEconomy](images/analise_search2.png)
 ![Página Analise do PolitEconomy](images/analise_search3.png)
 ![Página Analise do PolitEconomy](images/analise_search4.png)
 
@@ -103,8 +102,8 @@ Certifique-se de ter o seguinte software instalado:
 Primeiro, clone o repositório do projeto para sua máquina local:
 
 ```bash
-git clone <URL_DO_SEU_REPOSITORIO_GITHUB>
-cd polit-economy
+git clone https://github.com/4venturelli/PolitEconomy
+cd PolitEconomy
 ```
 ### 2. Configuração do Backend
 
@@ -137,14 +136,14 @@ npm install
 
 ### 3. Configuração do Módulo de IA
 
-Navegue até o diretório backend/analise_sentimento:
+Vá até o diretório backend/analise_sentimento:
 ```bash
 cd backend/analise_sentimento
 ```
 
 ### 3.1. Criar Ambiente Virtual (Recomendado)
 
-É uma boa prática criar um ambiente virtual Python para gerenciar as dependências:
+Criar um ambiente virtual Python para gerenciar as dependências:
 ```bash 
 python -m venv venv
 ```
@@ -163,13 +162,15 @@ source venv/bin/activate
 
 ### 3.2. Instalar Dependências Python
 
-Instale as bibliotecas Python necessárias. Crie um arquivo requirements.txt na pasta backend/IA com o seguinte conteúdo (certifique-se de que as versões correspondem às suas):
+Instale as bibliotecas Python necessárias. Crie um arquivo requirements.txt na pasta backend/analise_sentimento com o seguinte conteúdo.
 
+```bash
 transformers
 torch # ou tensorflow, dependendo de como o modelo BERT é usado
 scikit-learn
 pandas
 pymongo
+```
 
 Depois, instale:
 
@@ -179,71 +180,72 @@ pip install -r requirements.txt
 
 ### 3.3. Conjunto de Dados
 
-Certifique-se de que o arquivo brazilian_headlines_sentiments.csv esteja presente no diretório backend/analise_sentimento/. Este é o dataset usado para treinamento do modelo de sentimento.
+Confira se o arquivo brazilian_headlines_sentiments.csv esteja no diretório backend/analise_sentimento/. Este é o dataset usado para treinamento do modelo de sentimento.
 
 ### 4. Configuração do Frontend
 
-Navegue de volta para a raiz do projeto (se você seguiu os passos anteriores):
+Vá para raiz do projeto.
 
 ```bash
 cd ../../frontend
 ```
 
-O frontend não possui dependências de pacotes npm para serem instaladas, pois utiliza HTML, CSS e JavaScript puro. Certifique-se apenas de que a estrutura de pastas está correta e que os arquivos estão acessíveis.
+O frontend não possui dependências de pacotes npm para serem instaladas, pois utiliza HTML, CSS e JavaScript puro. Tenha certeza de que a estrutura de pastas está correta e que os arquivos estão acessíveis.
 
 ### 5. Rodar o Projeto
 
-Você precisará iniciar o servidor do MongoDB (se estiver rodando localmente) e então o backend e o módulo de IA separadamente.
+Você precisará iniciar o servidor do MongoDB (se estiver rodando localmente) e então o backend, coletor e frontend do projeto PolitEconomy.
 
 ### 5.1. Iniciar o Servidor MongoDB
 
-Se você estiver rodando o MongoDB localmente, inicie-o. A forma de fazer isso varia de acordo com seu sistema operacional e instalação.
+Se você estiver rodando o MongoDB localmente, inicie ele. A forma de fazer isso varia de acordo com seu sistema operacional e instalação.
 
 ### 5.2. Iniciar o Backend
 
-Na raiz do diretório backend, inicie o servidor Node.js:
+Na raiz do diretório principal do projeto (onde está o package.json), você pode iniciar o backend e o frontend simultaneamente usando o script start:
 
 ```bash
-node index.js
+npm start
 ```
 
-Você verá mensagens no console como "Conectado ao banco de dados principal (Banco_Coletor)!" e "Servidor rodando em http://localhost:3000".
+Este comando executará:
 
-### 5.3. Iniciar o Coletor de Notícias (Opcional, para Popular o Banco de Dados)
+* npm run backend: Inicia o servidor Node.js (com nodemon para reinício automático em caso de mudanças no código).
 
-Se você precisa popular seu banco de dados com notícias, você pode rodar o coletor. Na raiz do diretório backend/coletor:
+* npm run frontend: Inicia um servidor web (com live-server) para o frontend.
+
+Você verá mensagens dos servidores no seu terminal. O backend estará rodando em http://localhost:3000 e o frontend geralmente em http://localhost:8080.
+
+### 5.3. Iniciar o Coletor de Notícias 
+
+Se você precisa popular seu banco de dados com notícias, pode rodar o coletor separadamente. Em um novo terminal, na raiz do diretório principal do projeto:
 
 ```bash
-node main.js
+npm run coletor
 ```
 
-### 5.4. Treinar e Rodar o Módulo de IA (Opcional, para Análise de Sentimento)
+### 5.4. Treinar e Rodar o Módulo de IA 
 
-Na raiz do diretório backend/IA, dentro do ambiente virtual Python ativado:
+Caso queira fazer a análise de sentimento, voce terá que:
 
-* Treinar o Modelo (se ainda não o fez):
-* 
+* Treinar o Modelo (se ainda não tiver treinado):
+  
 ```bash
 python treinar_bert.py
 ```
 
-* Analisar Notícias no Banco de Dados (Aplicar Sentimento):
+* Analisar Notícias no Banco de Dados (aplicar sentimento):
 
 ```bash
 python analise_banco.py
 ```
 
-Este script lerá as notícias sem sentimento do banco, aplicará o modelo e atualizará os registros.
+Este script vai ler as notícias sem sentimento do banco, aplicar o modelo e atualizar os registros.
 
-### 5.5. Acessar o Frontend
+### 5.5. Acessar a Aplicação
 
-Com o backend rodando, você pode acessar o frontend abrindo o arquivo frontend/index.html diretamente no seu navegador web.
-
-Se você tem um servidor HTTP simples (como o Live Server no VS Code ou http-server via npm) para servir os arquivos estáticos do diretório frontend, você pode iniciá-lo. Exemplo com http-server:
+Com o backend e o frontend rodando, abra seu navegador web e acesse a URL do frontend, que geralmente é:
 
 ```bash
-# Na raiz do projeto, instale (se ainda não tiver):
-npm install -g http-server
-# Depois, na pasta frontend:
-http-server .
+http://localhost:8080
 ```
