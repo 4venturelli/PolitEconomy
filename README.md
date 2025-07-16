@@ -1,5 +1,6 @@
 ![Logo PolitEconomy](images/logo.png) 
-# PolitEconomy: Análise de Sentimento de Notícias Políticas e Econômicas
+<img src="images/logo.png" width="680" height="120">
+# Análise de Sentimento de Notícias Políticas e Econômicas
 
 ## Visão Geral do Projeto
 
