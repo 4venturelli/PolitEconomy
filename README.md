@@ -2,7 +2,7 @@
 
 ## Visão Geral do Projeto
 
-O PolitEconomy é uma plataforma web inovadora desenvolvida para auxiliar investidores, analistas e qualquer pessoa interessada a navegar com segurança no complexo cenário político e econômico brasileiro. Nosso sistema coleta e analisa notícias de diversas fontes renomadas, aplicando **Inteligência Artificial (IA)** para realizar uma **análise de sentimento imparcial**. O objetivo é transformar um volume massivo de informações em **insights acionáveis**, permitindo aos usuários **antecipar tendências e tomar decisões mais embasadas**.
+O PolitEconomy é uma plataforma web desenvolvida para auxiliar investidores, analistas e qualquer pessoa interessada a navegar com segurança no complexo cenário político e econômico brasileiro. Nosso sistema coleta e analisa notícias de diversas fontes renomadas, aplicando **Inteligência Artificial (IA)** para realizar uma **análise de sentimento imparcial**. O objetivo é transformar um volume massivo de informações em **insights acionáveis**, permitindo aos usuários **antecipar tendências e tomar decisões mais embasadas**.
 
 A plataforma oferece dashboards visuais, recursos de busca avançada e um sistema de notificações personalizadas, garantindo que você esteja sempre à frente dos acontecimentos que podem impactar o mercado.
 
