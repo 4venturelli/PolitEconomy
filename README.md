@@ -68,6 +68,12 @@ O PolitEconomy segue uma arquitetura distribuída, composta pelos seguintes mód
 Aqui estão algumas telas da aplicação:
 
 ![Página Analise do PolitEconomy](images/analise1.png)
+![Página Analise do PolitEconomy](images/analise2.png)
+![Página Analise do PolitEconomy](images/analise3.png)
+![Página Analise do PolitEconomy](images/analise_search1.png)
+![Página Analise do PolitEconomy](images/analise_search2.png)
+![Página Analise do PolitEconomy](images/analise_search3.png)
+![Página Analise do PolitEconomy](images/analise_search4.png)
 
 Este é um exemplo da nossa dashboard de análise.
 
